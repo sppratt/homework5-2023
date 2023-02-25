@@ -1,0 +1,143 @@
+
+/* key frames */
+@keyframes logo{
+    from {width: 25px; opacity: 0;}
+    to {width: 475px; opacity: 1;} 
+}  
+
+img#logo{
+    animation-name: logo;
+    animation-duration: 5s;
+}
+
+
+body{
+    font-family: 'Poppins', serif;
+    background-image: url('../images/concrete_seamless.png');
+    background-color: #f1f1f1;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .nav_links{
+    display: flex;
+} */
+
+a:visited{
+    color: blue;
+}
+
+.card > header{
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.card {
+    border-radius: 50px 50px 0px 0px;
+    flex-basis: 450px;
+} 
+
+.pricing, .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px.   */
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+/* .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+@media only screen and (min-width: 900px) {
+
+    header{
+        /* align-items: flex-start; */
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .nav_links{
+        display: flex;
+    }
+
+    .card {
+        flex-basis: 275px;
+    }
+
+    /* div:nth-child(2){
+        height: 1000px;
+    } */
+    /* make middle card taller */
+
+    body > header{
+        position: sticky;
+        top: 0;
+
+    }
+
+
+}
+
+@media (prefers-reduced-motion) {
+    /* styles to apply if the user's settings are set to reduced motion */
+
+    img#logo{
+        animation: none;
+    }
+}
+
+@media print {
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+        flex-direction: column;
+        /* justify-items: space-between;  */
+        /* spread out nav items */
+    }
+
+    .nav_links{
+        display: flex;
+        list-style-type:none;
+        /* flex-direction: row; */
+    }
+
+    .pricing {
+        display: flex;
+        flex-wrap: nowrap;
+
+    }
+
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    #gallery, .gallery{
+        visibility: hidden;
+        /* get rid of space before footer */
+    }
+
+    .pricing li:nth-child(2)::after{
+        content: "👍";
+    }
+
+    /* footer{
+        /* position: absolute;
+        top: 0; */
+        /* put at top of second page */
+    
+}
