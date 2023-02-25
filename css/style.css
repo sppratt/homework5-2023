@@ -28,7 +28,7 @@ header{
 
 /* STEP 4 */
 /* Edit the css for the nav_links class to use flex to match our example. Do not modify the list items or the links - modify the nav_links class to use flex. */
-.nav_links{
+.nav_links nav{
     display: flex;
     flex-direction: column;
 }
