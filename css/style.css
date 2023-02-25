@@ -30,6 +30,7 @@ header{
 /* Edit the css for the nav_links class to use flex to match our example. Do not modify the list items or the links - modify the nav_links class to use flex. */
 .nav_links{
     display: flex;
+    flex-direction: column;
 }
 
 /* STEP 5 */
@@ -87,6 +88,8 @@ solid 2px border using #45ADAD,
 
     .nav_links{
         display: flex;
+        flex-direction: row;
+
     }
 
     /* STEP 12 */
@@ -131,6 +134,9 @@ solid 2px border using #45ADAD,
     /* Edit the nav/nav_links elements so that they are spaced according to the image above. */
     .nav_links{
         display: flex;
+        flex-direction: row;
+        /* justify-content: space-between;
+        align-content: space-between; */
     }
 
     ul {
